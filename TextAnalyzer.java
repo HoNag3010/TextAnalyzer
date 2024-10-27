@@ -16,8 +16,8 @@ public class TextAnalyzer {
         printHeader();      // Print a welcome banner
 
         Scanner scan = new Scanner(System.in);      // Declare a scanner
-        ArrayList<String> sortString = new ArrayList<String>();         // Declare an ArrayList to use later
-        LinkedHashMap<String, Integer> counts = new LinkedHashMap<String, Integer>();           // Declare a LinkedHashMap to use later
+        ArrayList<String> sortString = new ArrayList<>();         // Declare an ArrayList to use later
+        LinkedHashMap<String, Integer> counts = new LinkedHashMap<>();           // Declare a LinkedHashMap to use later
         int uniqueChar = 0;         // This to count unique character
         int numChar = 0;            // This to count total character
 
@@ -37,12 +37,12 @@ public class TextAnalyzer {
                             sortString.add(word);           // it will add word into ArrayList
                         }
                     }
-                    fsc.close();                // Close the file scanner
                 }   
                 validInput = true;              // If everything is correct, boolean will turn to true so no more loop will occur
+                fsc.close();                // Close the file scanner
             } catch (FileNotFoundException ex) {            
                 System.out.print("Please enter a correct file path: ");         // If incorrect, loop and print the message
-            }
+            } 
         }
         Collections.sort(sortString);           // Sort the string using Collections.sort()
         
