@@ -62,7 +62,7 @@ public class TextAnalyzer {
         System.out.println("Here are the unique words and how many times each appeared:");
 
         for (var entry : counts.entrySet()) {           // For loop to print every word listed and its count
-            System.out.println(entry.getKey() + ": " + entry.getValue());
+            System.out.printf("%-25s%5d\n",entry.getKey(),entry.getValue());
         }
 
         printThankYouMessage(averageWords(numChar, sortString));        // Print the thank you message
